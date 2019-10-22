@@ -164,7 +164,7 @@ function getJenkinsClassname (test, options) {
     parent.title && titles.unshift(parent.title);
     parent = parent.parent;
   }
-  return options.jenkinsClassnamePrefix + titles.join('.');
+  return options.jenkinsClassnamePrefix + titles.join(options.suiteTitleSeparatedBy);
 }
 
 /**
